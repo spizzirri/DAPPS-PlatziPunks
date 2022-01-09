@@ -1,12 +1,16 @@
 require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
+
+const projectId = process.env.PROJECT_ID;
+const deployerSignerPrivateKey = process.env.DEPLOYER_SIGNER_PRIVATE_KEY;
 
 module.exports = {
   solidity: "0.8.4",
   networks: {
     rinkeby: {
-      url: "https://rinkeby.infura.io/v3/7b304accbc3c43c3851633d6f7a6e33c",
+      url: `https://rinkeby.infura.io/v3/${projectId}`,
       accounts:[
-        '0x22f7cb13b028cecff987ae20019be797820cffa57f515b273fdb2650e4ac1b21'
+        deployerSignerPrivateKey
       ]
     }
   }
