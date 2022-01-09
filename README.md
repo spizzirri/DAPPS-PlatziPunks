@@ -16,3 +16,4 @@ npx hardhat help
 
 https://infura.io/
 https://faucets.chain.link/rinkeby
+https://rinkeby.etherscan.io/
