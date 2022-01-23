@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.0;
 
 contract PlatziPunksDNA{
 
@@ -226,7 +226,7 @@ contract PlatziPunksDNA{
             );
     }
 
-    function _getAccesoriesType(uint8 _dna)
+    function getAccessoriesType(uint8 _dna)
         public
         view
         returns (string memory)
@@ -235,27 +235,27 @@ contract PlatziPunksDNA{
         return _accessoriesType[dnaSection % _accessoriesType.length];
     }
 
-    function _getClotheColor(uint8 _dna) public view returns (string memory) {
+    function getClotheColor(uint8 _dna) public view returns (string memory) {
         uint8 dnaSection = _getDNASection(_dna, 2);
         return _clotheColor[dnaSection % _clotheColor.length];
     }
 
-    function getClotheType(uint256 _dna) public view returns (string memory) {
+    function getClotheType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 4);
         return _clotheType[dnaSection % _clotheType.length];
     }
 
-    function getEyeType(uint256 _dna) public view returns (string memory) {
+    function getEyeType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 6);
         return _eyeType[dnaSection % _eyeType.length];
     }
 
-    function getEyeBrowType(uint256 _dna) public view returns (string memory) {
+    function getEyeBrowType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 8);
         return _eyebrowType[dnaSection % _eyebrowType.length];
     }
 
-    function getFacialHairColor(uint256 _dna)
+    function getFacialHairColor(uint8 _dna)
         public
         view
         returns (string memory)
@@ -264,7 +264,7 @@ contract PlatziPunksDNA{
         return _facialHairColor[dnaSection % _facialHairColor.length];
     }
 
-    function getFacialHairType(uint256 _dna)
+    function getFacialHairType(uint8 _dna)
         public
         view
         returns (string memory)
@@ -273,32 +273,32 @@ contract PlatziPunksDNA{
         return _facialHairType[dnaSection % _facialHairType.length];
     }
 
-    function getHairColor(uint256 _dna) public view returns (string memory) {
+    function getHairColor(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 14);
         return _hairColor[dnaSection % _hairColor.length];
     }
 
-    function getHatColor(uint256 _dna) public view returns (string memory) {
+    function getHatColor(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 16);
         return _hatColor[dnaSection % _hatColor.length];
     }
 
-    function getGraphicType(uint256 _dna) public view returns (string memory) {
+    function getGraphicType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 18);
         return _graphicType[dnaSection % _graphicType.length];
     }
 
-    function getMouthType(uint256 _dna) public view returns (string memory) {
+    function getMouthType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 20);
         return _mouthType[dnaSection % _mouthType.length];
     }
 
-    function getSkinColor(uint256 _dna) public view returns (string memory) {
+    function getSkinColor(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 22);
         return _skinColor[dnaSection % _skinColor.length];
     }
 
-    function getTopType(uint256 _dna) public view returns (string memory) {
+    function getTopType(uint8 _dna) public view returns (string memory) {
         uint256 dnaSection = _getDNASection(_dna, 24);
         return _topType[dnaSection % _topType.length];
     }
